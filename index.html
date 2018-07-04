@@ -7,6 +7,7 @@
 </head>
 <body>
   <div id="app"><!--     [> この#appの内側にテンプレートを書き込んでいく <] -->
+    <button v-on:click="show=!show">切り替え</button>
     <transition>
       <p v-if="show">Hello Vue</p>
     </transition>
