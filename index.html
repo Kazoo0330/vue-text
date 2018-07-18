@@ -8,11 +8,13 @@
 <body>
   <div id="app">
     <!--[> この#appの内側にテンプレートを書き込んでいく <]-->
-    <!-- countプロパティを表示 -->
-    <p>{{ count }}回クリックしましたねえ</p>
-
-    <!-- ここをクリックでincrement method呼び出し -->
-    <p><button v-on:click="increment">increase count</button></p>
+    <button v-on:click="isActive=!isActive">isActiveを切り替える</button>
+    <p v-bind:class="{ child: isChild, 'is-active': isActive }" class="item">
+      動的なクラス
+    </p>
+    <p v-bind:style="{ color: textColor, backgroundColor: bgColor }" class="item">
+      動的なスタイル
+    </p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
