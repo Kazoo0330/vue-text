@@ -1,13 +1,12 @@
 new Vue({
   el: '#app',
   data: {
-    // object data
-    message: {
-      value: 'Vue.js!'
-    },
-    // array data used in 3 and 4
-    list: ['Ferrari', 'Lamborghini', 'Pagani', 'McLaren'],
-    // used in 4
-    num: 1
+    count: 0
+  },
+  methods: {
+    // handler for clicking the button
+    increment: function(){
+      this.count += 1  //処理は再代入のみ
+    }
   }
 })

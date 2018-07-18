@@ -8,22 +8,11 @@
 <body>
   <div id="app">
     <!--[> この#appの内側にテンプレートを書き込んでいく <]-->
+    <!-- countプロパティを表示 -->
+    <p>{{ count }}回クリックしましたねえ</p>
 
-    <input type="text" v-bind:value="message">
-    <input type="text" :value="message">
-
-    <p>{{ message.value }}</p>
-    <!-- １オブジェクトのプロパティ表示 -->
-
-    <p>{{ message.value.length }}</p>
-    <!-- ２文字列の長さを表示 -->
-
-    <p>{{ list[2] }}</p>
-    <!-- ３リストのインデックス２を表示 -->
-
-    <p>{{ list[num] }}</p>
-    <!-- ４プロパティを組み合わせて使用 -->
-
+    <!-- ここをクリックでincrement method呼び出し -->
+    <p><button v-on:click="increment">increase count</button></p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
