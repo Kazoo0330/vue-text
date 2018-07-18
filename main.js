@@ -1,14 +1,13 @@
-var app = new Vue({
+new Vue({
   el: '#app',
   data: {
-    // message: '初期メッセージ',
-    // list: ['apple', 'banana', 'strawberry'],
-    show: true
-  // },
-  // methods: {
-    // handleClick: function(event) {
-      // alert(event.target)
-    // }
+    // object data
+    message: {
+      value: 'Vue.js!'
+    },
+    // array data used in 3 and 4
+    list: ['Ferrari', 'Lamborghini', 'Pagani', 'McLaren'],
+    // used in 4
+    num: 1
   }
 })
-console.log(app.message)

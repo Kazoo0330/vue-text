@@ -6,11 +6,24 @@
   <link href="main.css" rel="stylesheet">
 </head>
 <body>
-  <div id="app"><!--     [> この#appの内側にテンプレートを書き込んでいく <] -->
-    <button v-on:click="show=!show">切り替え</button>
-    <transition>
-      <p v-if="show">Hello Vue</p>
-    </transition>
+  <div id="app">
+    <!--[> この#appの内側にテンプレートを書き込んでいく <]-->
+
+    <input type="text" v-bind:value="message">
+    <input type="text" :value="message">
+
+    <p>{{ message.value }}</p>
+    <!-- １オブジェクトのプロパティ表示 -->
+
+    <p>{{ message.value.length }}</p>
+    <!-- ２文字列の長さを表示 -->
+
+    <p>{{ list[2] }}</p>
+    <!-- ３リストのインデックス２を表示 -->
+
+    <p>{{ list[num] }}</p>
+    <!-- ４プロパティを組み合わせて使用 -->
+
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
